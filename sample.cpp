@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+// these are the examples of some basic but difficult program .
 /*
 int main() {
     int x,y;
@@ -56,6 +56,7 @@ int main() {
 }
 */
 
+/*
 int main() {
     int n;
     cout << "Enter the number of rows: ";
@@ -80,3 +81,4 @@ int main() {
 
     return 0;
 }
+*/
