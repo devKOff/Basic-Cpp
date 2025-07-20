@@ -33,7 +33,7 @@ int main() {
 */
 
 // this code is for making a simple program with the use of break,continue and nested loop.
-
+/*
 int main() {
 
     int x,num;
@@ -53,4 +53,30 @@ int main() {
 
         }
     }
+}
+*/
+
+int main() {
+    int n;
+    cout << "Enter the number of rows: ";
+    cin >> n;
+
+    int even = 2;  // start from the first even number
+
+    for (int i = 1; i <= n; i++) {
+        // print spaces for right alignment
+        for (int s = 1; s <= n - i; s++) {
+            cout << " ";
+        }
+
+        // print even numbers
+        for (int j = 1; j <= i; j++) {
+            cout << even << " ";
+            even += 2;
+        }
+
+        cout << endl;
+    }
+
+    return 0;
 }
