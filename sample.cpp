@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-
+/*
 int main() {
     int x,y;
     cout<<"Enter the number : ";
@@ -14,6 +14,7 @@ int main() {
 
     }
 }
+*/
 // this is a problem related to nested loop
 /*
 int main() {
@@ -30,3 +31,26 @@ int main() {
     }
 }
 */
+
+// this code is for making a simple program with the use of break,continue and nested loop.
+
+int main() {
+
+    int x,num;
+    int j=0;
+    cout<<"Enter the end range of numbers: ";
+    cin>>x;
+    cout<<"Enter how many numbers you need : ";
+    cin>>num;
+    cout <<"The numbers are : ";
+    for (int i = 1; i <= x; i++) {
+        if (i%4==0) {
+            cout<<i<<" ";
+            j++;
+            if (j==num) {
+                break;
+            }
+
+        }
+    }
+}
