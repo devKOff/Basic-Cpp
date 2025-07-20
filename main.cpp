@@ -1,46 +1,57 @@
 #include <iostream>
 #include <string>
 using namespace std;
-// This program is to understand conditional statements(if,else,switch)
+
+
+
 int main() {
-    int age1;
-    cout << "Enter your age: ";
-    cin >> age1;
-    if (age1>=18) {
-        cout<<"Your age if above 18 years so, you can use this calculater"<<endl;
-        int x,y;
-        cout<<"Enter the value of x and y."<<endl;
-        cin>>x>>y;
-        cout<<"your numbers are "<<x<<" and "<<y<<endl;
-        int a;
-        cout<<"Enter 1 for sum 1 for sub and 3 for mul"<<endl;
-
-        cout<<"enter your choice : ";
-        cin>>a;
-        cout<<"your choice is "<<a<<endl;
-        int add = x+y;
-        int sub = x-y;
-        int mul = x*y;
-        switch (a) {
-
+    cout <<"Welcome to our Bank"<<endl;
+    int pass= 1239;
+    int npass;
+    cout<<"Enter the password:"<<endl;
+    cin>>npass;
+    int n;
+    int bb,lb;
+    bb = 100000;
+    if (pass==npass) {
+        cout<<"You entered correctly!"<<endl;
+        cout<<"____MENU____"<<endl;
+        cout<<"1. Check Bank balance"<<endl;
+        cout<<"2. Withdraw Money from the bank"<<endl;
+        cout<<"3. Deposit Money in the bank"<<endl;
+        cout<<"4. Exit"<<endl;
+        cout<<"Enter your choice:"<<endl;
+        cin>>n;
+        switch (n) {
             case 1:
-                cout<<"Your sum is "<<add<<endl;
+                cout<<"Your bank balance is"<<bb<<endl;
                 break;
             case 2:
-                cout<<"Your sub is "<<sub<<endl;
+                cout<<"Enter amount"<<endl;
+                cin>>lb;
+                if (lb>bb) {
+                    cout<<"Your bank does not have the money"<<endl;
+
+                }
+                else {
+                    cout<<"withdrawl compleated !!"<<endl;
+                    cout<<"Current balance is : "<<bb-lb<<endl;
+
+                }
                 break;
-            case 3:
-                cout<<"Your mul is "<<mul<<endl;
+            case 3: {
+                    cout<<"Enter the amount you have to deposit : ";
+                    cin>>lb;
+                    cout<<"Current Balance : "<<bb+lb<<endl;
+                }
                 break;
 
+            case 4: {
+                    cout<<"Exit"<<endl;
+                }
+                break;
         }
 
-    }
-    else {
-        cout<<"You are not old enough to use the calculator.";
 
     }
-
-
-    return 0;
 }
