@@ -3,7 +3,7 @@
 using namespace std;
 
 // here we are going to learn about function and learn some basic program
-
+/*
 int add(int a, int b) {
     return a + b;
 }
@@ -37,5 +37,49 @@ int main() {
     else if (fun=='/') {
         cout<<dev(n1,n2)<<endl;
     }
+
+}
+*/
+
+//here we have a basic function overloading example
+/*
+void gre(string a,string b,int tim) {
+    cout<<"Good morning "<<a<<" and "<<b<<" It is "<<tim<<"O'clock."<<endl;
+
+}
+
+int main() {
+    string p1,p2;
+    int time;
+    cout<<"Please enter your name:";
+    cin>>p1;
+    cout<<"Please enter your partner's name:";
+    cin>>p2;
+    cout <<"Please enter your time:";
+    cin>>time;
+    gre(p1,p2,time);
+
+}
+*/
+// last pro tip for project
+
+void area(int width, int height) {
+    cout << "Area is " << width * height << endl;
+}
+void area(float width, float height) {
+    cout << "Area is " << width * height << endl;
+
+}
+void area(double rad) {
+    cout << "Area is " << 3.14*rad << endl;
+}
+int main() {
+    int w = 5, h = 10;
+    float wf = 4.5, hf = 3.5;
+    double r = 2.5;
+    area(w, h);
+    area(wf, hf);
+    area(r);
+
 
 }
