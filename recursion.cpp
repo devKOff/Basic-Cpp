@@ -30,7 +30,7 @@ int main() {
     pr(1,x);
 }
 */
-
+/*
 int soa(int n) {
     if (n==0)return 1;
     int l=n%10;
@@ -44,4 +44,24 @@ int main() {
     cin>>x;
     int result = soa(x);
     cout << "\nSum of digits: " << result << endl;
+}
+*/
+int count(int n) {
+    if (n == 0) return 0;
+    int qu = n/10;
+    int rem = n%10;
+    if (rem == 0) {
+        return 1+count(qu);
+    }
+    else {
+        return count(qu);
+    }
+}
+
+int main() {
+    int num;
+    cout <<"Enter the number : ";
+    cin>>num;
+    cout<< "The numbers are "<<count(num);
+
 }
