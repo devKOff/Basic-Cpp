@@ -62,7 +62,7 @@ int main() {
 }
 */
 // last pro tip for project
-
+/*
 void area(int width, int height) {
     cout << "Area is " << width * height << endl;
 }
@@ -82,4 +82,17 @@ int main() {
     area(r);
 
 
+}
+
+*/
+// default arguments - when we do not assign value to the function
+
+void greet(string name = "Guest",int t = 4) {
+    cout<<"Good morning "<<name<<" your departure is at "<<t<<" O'clock."<<endl;
+
+}
+int main() {
+    greet();
+    greet("Dev");
+    greet("Raj",12);
 }
