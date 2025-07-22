@@ -7,4 +7,5 @@ add_executable(platform main.cpp)
 add_executable(platform loop.cpp)
 add_executable(platform sample.cpp)
 add_executable(platform functions.cpp
-        array.cpp)
+        array.cpp
+)
