@@ -32,25 +32,30 @@ void digonal(int mat[3][3]) {
     }
     cout<<"Sum of diagonal elements are : "<<sumd<<" ";
 }
-int sumrow(int mat[3][3]) {
+void sumrow(int mat[3][3]) {
     for (int x = 0; x < 3; x++) {
         int sumr=0;
         for (int y = 0; y < 3; y++) {
-            for (int z = 0; z < 3; z++) {
-                if (y==z) {
-                    sumr+=mat[x][y];
-                }
-            }
+            sumr+=mat[x][y];
         }cout<<"Sum of "<<x+1<<" row is : "<<sumr<<endl;
     }
 }
-int sumcol(int mat[3][3]) {
+void sumcol(int mat[3][3]) {
     for (int x = 0; x < 3; x++) {
         int sumc=0;
         for (int y = 0; y < 3; y++) {
             sumc+=mat[y][x];
         }
         cout<<"Sum of "<<x+1<<" column is : "<<sumc<<endl;
+    }
+}
+void transpose(int mat[3][3]) {
+    cout<<"Transpose of matrix is :"<<endl;
+    for (int x = 0; x < 3; x++) {
+        for (int y = 0; y < 3; y++) {
+            cout<<mat[y][x]<<" ";
+        }
+        cout<<endl;
     }
 }
 
@@ -64,9 +69,13 @@ int main() {
     cout<<endl;
     digonal(matrix);
     cout<<endl;
+    sumcol(matrix);
+    cout<<endl;
     sumrow(matrix);
     cout<<endl;
-    sumcol(matrix);
+    transpose(matrix);
+
+
 
 
 }
