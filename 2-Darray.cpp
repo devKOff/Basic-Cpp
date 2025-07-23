@@ -63,10 +63,11 @@ void matrixmultiply(int mat1[3][3],int mat2[3][3]) {
     for (int x = 0; x < 3; x++) {
         int res[3][3];
         for (int y = 0; y < 3; y++) {
-            res[x][y]=mat1[x][y]*mat2[y][x] + mat1[x+1][y+1]*mat2[y+1][x+1] + mat1[x+2][y+2]*mat2[y+2][x+2];
-            cout<<res[x][y]<<" ";
-        }
-        cout<<endl;
+            res[x][y] = 0;
+            for (int z = 0; z < 3; z++) {
+                res[x][y] += mat1[x][z] * mat2[z][y];
+            }cout<<res[x][y]<<" ";
+        }cout<<endl;
     }
 }
 
