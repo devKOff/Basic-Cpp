@@ -58,13 +58,34 @@ void transpose(int mat[3][3]) {
         cout<<endl;
     }
 }
+void matrixmultiply(int mat1[3][3],int mat2[3][3]) {
+    cout<<"Matrix multiplication is :"<<endl;
+    for (int x = 0; x < 3; x++) {
+        int res[3][3];
+        for (int y = 0; y < 3; y++) {
+            res[x][y]=mat1[x][y]*mat2[y][x];
+            cout<<res[x][y]<<" ";
+        }
+        cout<<endl;
+    }
+}
 
 
 
 int main() {
-    int matrix[3][3];
-    inp(matrix);
+    int matrix1[3][3];
+    int matrix2[3][3];
+
+
+    inp(matrix1);
     cout<<endl;
+    inp(matrix2);
+    cout<<endl;
+    display(matrix1);
+    cout<<endl;
+    display(matrix2);
+    cout<<endl;
+    /*
     display(matrix);
     cout<<endl;
     digonal(matrix);
@@ -73,7 +94,10 @@ int main() {
     cout<<endl;
     sumrow(matrix);
     cout<<endl;
-    transpose(matrix);
+
+    transpose(matrix1);
+    */
+    matrixmultiply(matrix1,matrix2);
 
 
 
