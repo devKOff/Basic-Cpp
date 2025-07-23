@@ -60,8 +60,8 @@ void transpose(int mat[3][3]) {
 }
 void matrixmultiply(int mat1[3][3],int mat2[3][3]) {
     cout<<"Matrix multiplication is :"<<endl;
+    int res[3][3];
     for (int x = 0; x < 3; x++) {
-        int res[3][3];
         for (int y = 0; y < 3; y++) {
             res[x][y] = 0;
             for (int z = 0; z < 3; z++) {
