@@ -8,4 +8,5 @@ add_executable(platform loop.cpp)
 add_executable(platform sample.cpp)
 add_executable(platform functions.cpp
         array.cpp
+        2-Darray.cpp
 )
