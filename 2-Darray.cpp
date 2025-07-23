@@ -48,10 +48,7 @@ int sumcol(int mat[3][3]) {
     for (int x = 0; x < 3; x++) {
         int sumc=0;
         for (int y = 0; y < 3; y++) {
-            if (x<=y) {
-                sumc+=mat[y][x];
-                cout<<sumc;
-            }cout<<sumc;
+            sumc+=mat[y][x];
         }
         cout<<"Sum of "<<x+1<<" column is : "<<sumc<<endl;
     }
