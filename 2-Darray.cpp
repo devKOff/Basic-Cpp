@@ -70,7 +70,7 @@ void matrixmultiply(int mat1[3][3],int mat2[3][3]) {
         }cout<<endl;
     }
 }
-void matrixadd(int mat1[3][3],int mat2[3][3]) {
+void matadd(int mat1[3][3],int mat2[3][3]) {
     cout<<"Matrix addition is :"<<endl;
     int res[3][3];
     for (int x = 0; x < 3; x++) {
@@ -98,22 +98,24 @@ void symmetric(int mat1[3][3]) {
     int mat2[3][3];
     for (int x = 0; x < 3; x++) {
         for (int y = 0; y < 3; y++) {
-            mat1[y][x]=mat2[x][y];
+            mat2[x][y] = mat1[y][x];
         }
-        cout<<endl;
     }
-    for (int i =0 ; i<3 ; i++) {
-        for (int j =0 ; j<3 ; j++) {
-            if (mat1[i][j]==mat2[i][j]) {
-                cout<<"The matrix is symmetric ."<<endl;
+    bool sym = true;
+    for (int x = 0; x < 3; x++) {
+        for (int y = 0; y < 3; y++) {
+            if (mat2[x][y] != mat1[x][y]) {
+                sym= false;
+                break;
             }
-            else cout<<"The matrix is NOT symmetric ."<<endl;
         }
-        cout<<endl;
     }
-
-
-
+    if (sym) {
+        cout<<"Symmetric matrix."<<endl;
+    }
+    else {
+        cout<<"No symmetric matrix."<<endl;
+    }
 }
 
 
@@ -126,26 +128,31 @@ int main() {
 
     inp(matrix1);
     cout<<endl;
-    inp(matrix2);
-    cout<<endl;
     display(matrix1);
     cout<<endl;
+    inp(matrix2);
+    cout<<endl;
+
     display(matrix2);
     cout<<endl;
-    /*
-    display(matrix);
-    cout<<endl;
-    digonal(matrix);
-    cout<<endl;
-    sumcol(matrix);
-    cout<<endl;
-    sumrow(matrix);
-    cout<<endl;
 
+    display(matrix1);
+    cout<<endl;
+    digonal(matrix1);
+    cout<<endl;
+    sumcol(matrix1);
+    cout<<endl;
+    sumrow(matrix1);
+    cout<<endl;
     transpose(matrix1);
-    */
+    cout<<endl;
     matrixmultiply(matrix1,matrix2);
-
+    cout<<endl;
+    matadd(matrix1,matrix2);
+    cout<<endl;
+    matrixsub(matrix1,matrix2);
+    cout<<endl;
+    symmetric(matrix1);
 
 
 
