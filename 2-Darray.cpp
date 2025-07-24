@@ -70,6 +70,52 @@ void matrixmultiply(int mat1[3][3],int mat2[3][3]) {
         }cout<<endl;
     }
 }
+void matrixadd(int mat1[3][3],int mat2[3][3]) {
+    cout<<"Matrix addition is :"<<endl;
+    int res[3][3];
+    for (int x = 0; x < 3; x++) {
+        for (int y = 0; y < 3; y++) {
+            res[x][y]=mat1[x][y]+mat2[x][y];
+            cout<<res[x][y]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+void matrixsub(int mat1[3][3],int mat2[3][3]) {
+    cout<<"Matrix subtraction is :"<<endl;
+    int res[3][3];
+    for (int x = 0; x < 3; x++) {
+        for (int y = 0; y < 3; y++) {
+            res[x][y]=mat1[x][y]-mat2[x][y];
+            cout<<res[x][y]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+void symmetric(int mat1[3][3]) {
+    int mat2[3][3];
+    for (int x = 0; x < 3; x++) {
+        for (int y = 0; y < 3; y++) {
+            mat1[y][x]=mat2[x][y];
+        }
+        cout<<endl;
+    }
+    for (int i =0 ; i<3 ; i++) {
+        for (int j =0 ; j<3 ; j++) {
+            if (mat1[i][j]==mat2[i][j]) {
+                cout<<"The matrix is symmetric ."<<endl;
+            }
+            else cout<<"The matrix is NOT symmetric ."<<endl;
+        }
+        cout<<endl;
+    }
+
+
+
+}
+
 
 
 
