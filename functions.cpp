@@ -3,7 +3,7 @@
 using namespace std;
 
 // here we are going to learn about function and learn some basic program
-/*
+
 int add(int a, int b) {
     return a + b;
 }
@@ -39,10 +39,10 @@ int main() {
     }
 
 }
-*/
+
 
 //here we have a basic function overloading example
-/*
+
 void gre(string a,string b,int tim) {
     cout<<"Good morning "<<a<<" and "<<b<<" It is "<<tim<<"O'clock."<<endl;
 
@@ -60,9 +60,9 @@ int main() {
     gre(p1,p2,time);
 
 }
-*/
+
 // last pro tip for project
-/*
+
 void area(int width, int height) {
     cout << "Area is " << width * height << endl;
 }
@@ -84,7 +84,7 @@ int main() {
 
 }
 
-*/
+
 // default arguments - when we do not assign value to the function
 
 void greet(string name = "Guest",int t = 4) {
