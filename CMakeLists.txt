@@ -10,4 +10,5 @@ add_executable(platform functions.cpp
         array.cpp
         2-Darray.cpp
         strings.cpp
+        pointers.cpp
 )
