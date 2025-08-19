@@ -46,5 +46,10 @@ int main() {
     cout << "Value of arr: " << *ptrar << endl;
     cout << "Address of arr: " << &arr << endl;
 
+    int array1[6]= {34,33,33,231,345,88};
+    int *pkb = array1;
+    for (int i = 0; i < 6; i++) {
+        cout << "elements of array : " << *(pkb+i) << endl;
+    }
 
 }
