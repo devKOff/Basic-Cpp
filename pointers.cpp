@@ -24,5 +24,27 @@ int main() {
     cout << "Value of cgpa (direct): " << cgpa << endl;
     cout << "Value of cgpa (via pointer): " << *cg << endl;
 
-    return 0;
+
+    int num1 = 99;
+    int *pkj = &num1;
+    cout << "Address of num1: " << pkj << endl;
+    cout << "Value of num1: " << num1 << endl;
+    cout << "Address of pkj: " << &pkj << endl;
+    cout << "Value of pkj: " << *pkj << endl;
+
+    int arr[3]={75,27,93};
+    int *ptrar = arr;
+    cout << "Address of arr: " << ptrar << endl;
+    cout << "Value of arr: " << *ptrar << endl;
+    cout << "Address of arr: " << &arr << endl;
+    ptrar++;
+    cout << "Address of arr: " << ptrar << endl;
+    cout << "Value of arr: " << *ptrar << endl;
+    cout << "Address of arr: " << &arr << endl;
+    ptrar++;
+    cout << "Address of arr: " << ptrar << endl;
+    cout << "Value of arr: " << *ptrar << endl;
+    cout << "Address of arr: " << &arr << endl;
+
+
 }
